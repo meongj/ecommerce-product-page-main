@@ -3,9 +3,13 @@
 import Image from "next/image";
 import {useState} from "react";
 import {MENUS} from "../data/menus";
+import {useEscapeKey} from "../hooks/useEscapeKey";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // esc 클릭시 닫기
+  useEscapeKey(() => setIsOpen(false), isOpen);
 
   return (
     <>

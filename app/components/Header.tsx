@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {MobileNav} from "./MobileNav";
-import {CartButton} from "./CartButton";
+import {CartButton} from "./cart/CartButton";
 import {MENUS} from "../data/menus";
 
 export function Header() {
