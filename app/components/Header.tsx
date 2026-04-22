@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {MobileNav} from "./MobileNav";
+import {CartButton} from "./CartButton";
 
 const MENUS = ["Collections", "Men", "Women", "About", "Contact"];
 
@@ -29,12 +30,7 @@ export function Header() {
 
       {/* 장바구니, 프로필 */}
       <div className="flex md:gap-10 items-center gap-5">
-        <button
-          type="button"
-          aria-label="open cart"
-          className="text-muted hover:text-foreground cursor-pointer focus-visible:text-foreground focus-visible:outline-foreground">
-          <Image src="/icon-cart.svg" alt="cart" width={22} height={20} />
-        </button>
+        <CartButton />
         <button
           aria-label="open profile"
           className="rounded-full hover:ring-2 hover:ring-primary  cursor-pointer focus-visible:ring-2 focus-visible: ring-primary focus-visible:outline-foreground">
