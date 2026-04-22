@@ -5,7 +5,7 @@ const MENUS = ["Collections", "Men", "Women", "About", "Contact"];
 
 export function Header() {
   return (
-    <header className="flex items-center  justify-between lg:py-10 md:px-6 md:py-5 md:border-border md:border-b px-5 py-4 mx-auto w-full max-w-6xl ">
+    <header className="flex items-center  justify-between lg:py-10 md:px-6 md:py-8 md:border-border md:border-b px-5 py-4 mx-auto w-full max-w-6xl ">
       <div className="flex md:gap-14 gap-5 items-center">
         <MobileNav />
 
@@ -17,7 +17,10 @@ export function Header() {
             <a
               key={m}
               href="#"
-              className="hover:text-foreground focus-visible:text-foreground focus-visible:outline-none cursor-pointer">
+              className="relative transition-colors hover:text-foreground focus-visible:text-foreground focus-visible:outline-none cursor-pointer
+              after:absolute after:bottom-0 lg:after:-bottom-13 md:after:-bottom-11 after:left-0 after:h-1 after:w-full after:bg-primary
+              after:origin-left after:scale-x-0 after:transition-transform after:duration-300
+              hover:after:scale-x-100 focus:after:scale-x-100">
               {m}
             </a>
           ))}
