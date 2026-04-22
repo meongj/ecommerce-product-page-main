@@ -1,8 +1,7 @@
 import Image from "next/image";
 import {MobileNav} from "./MobileNav";
 import {CartButton} from "./CartButton";
-
-const MENUS = ["Collections", "Men", "Women", "About", "Contact"];
+import {MENUS} from "../data/menus";
 
 export function Header() {
   return (

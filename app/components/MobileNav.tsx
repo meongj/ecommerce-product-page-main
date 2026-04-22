@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import {useState} from "react";
-
-const MENUS = ["Collections", "Men", "Women", "About", "Contact"];
+import {MENUS} from "../data/menus";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
