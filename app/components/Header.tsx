@@ -1,15 +1,18 @@
 import Image from "next/image";
+import {MobileNav} from "./MobileNav";
 
 const MENUS = ["Collections", "Men", "Women", "About", "Contact"];
 
 export function Header() {
   return (
-    <header className="flex justify-between py-10">
-      <div className="flex gap-14 items-center">
+    <header className="flex items-center  justify-between lg:py-10 md:px-6 md:py-5 md:border-border md:border-b px-5 py-4 mx-auto w-full max-w-6xl ">
+      <div className="flex md:gap-14 gap-5 items-center">
+        <MobileNav />
+
         {/* 로고 */}
         <Image src="/logo.svg" alt="logo" className="cursor-pointer" width={138} height={20} priority />
         {/* 메뉴들 */}
-        <nav className="flex gap-8 text-muted text-sm" aria-label="primary">
+        <nav className="gap-8 text-muted text-sm hidden md:flex" aria-label="primary">
           {MENUS.map((m) => (
             <a
               key={m}
@@ -22,7 +25,7 @@ export function Header() {
       </div>
 
       {/* 장바구니, 프로필 */}
-      <div className="flex gap-6 items-center">
+      <div className="flex md:gap-10 items-center gap-5">
         <button
           type="button"
           aria-label="open cart"
